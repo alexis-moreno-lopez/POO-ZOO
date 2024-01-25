@@ -1,22 +1,15 @@
 <?php
-class Tigres extends Animals{
+class Tigres extends Animal{
 
-    private $vagabonder;
-
-    public function setVagabonder($vagabonder) {
-$this->vagabonder = $vagabonder;
-    }
-    public function getVagabonder() {
-       return $this->vagabonder;
-    }
+// Implémentation de la méthode abstraite pour le tigre
+public function ActionSpecifique() {
+    $this->vagabonder();
+}
+// Action spécifique au tigre
+        public function vagabonder() {
+            echo "Le tigre est en train de vagabonder.\n";
+        }
     
-    public function mouvement() {
-    
-    }
-
-    public function faim() {
-    
-    }
 
 }
 ?>
