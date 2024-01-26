@@ -1,13 +1,24 @@
 <?php
 class Ours extends Animal{
 
-    // Implémentation de la méthode abstraite pour l'ours
-    public function ActionSpecifique() {
-        $this->attraperPoisson();
+    private $espece = "Ours";
+
+    public function setEspece($espece) {
+        $this->espece = $espece;
     }
-// Action spécifique à l'ours
-    private function attraperPoisson() {
-        echo "L'ours est en train d'attraper un poisson.\n";
+    public function getEspece() {
+        return $this->espece;
     }
+
+    // Crie du tigre
+    public function emettreSon() {
+        echo "$this->crie hhhmmmmmm";
+    }
+    // déplacement du tigre
+        public function seDeplacer() {
+            echo "($this->espece) est en train de se prommener .\n";
+        }
+    
+
 }
 ?>

@@ -1,15 +1,25 @@
 <?php
  abstract class Poissons extends Animal{
 
-// Implémentation de la méthode abstraite pour le poisson
-    public function ActionSpecifique() {
-        $this->nager();
+    private $espece = "poissons";
+
+
+    public function setEspece($espece) {
+        $this->espece = $espece;
+    }
+    public function getEspece() {
+        return $this->espece;
     }
 
-// Action spécifique au poisson
-    private function nager() {
-        echo "Le poisson est en train de nager.\n";
+    // Crie du tigre
+    public function emettreSon() {
+        echo "$this->crie bloop bloop";
     }
+    // déplacement du tigre
+        public function seDeplacer() {
+            echo "($this->espece) est en train de nager .\n";
+        }
+    
 
 }
 ?>

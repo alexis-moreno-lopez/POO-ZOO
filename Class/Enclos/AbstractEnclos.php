@@ -16,39 +16,64 @@ abstract class Enclos {
         $this->nom = $nom;
         $this->proprete = $proprete;
     }
+
+public function setNom($nom) {
+    $this->nom=$nom;
+}
+
+public function getNom() {
+    return $this->nom;
+}
+
+public function setProprete($proprete) {
+    $this->proprete=$proprete;
+}
+
+public function getProprete() {
+    return $this->proprete;
+}
+
+public function setNombreAnimaux($nombreAnimaux) {
+    $this->nombreAnimaux=$nombreAnimaux;
+}
+
+public function getNombreAnimaux() {
+    return $this->nombreAnimaux;
+}
+
+public function setAnimals($animals) {
+    $this->animals=$animals;
+}
+
+public function getAnimals() {
+    return $this->animals;
+}
     
     // Accesseurs et mutateurs habituels
   // Méthodes abstraites spécifiques à chaque enclos
 
-// Méthode abstraite pour afficher les caractéristiques de l'enclos
- abstract public function afficherCaracteristiques();
-
 // Méthode abstraite pour afficher les caractéristiques des animaux dans l'enclos
-   abstract  public function afficherCaracteristiquesAnimaux(Animal $animal);
+ public function afficherCaracteristiquesAnimaux(Animal $animal){
+   echo "Espèce: " . $animal->getEspece() . "<br>"; // Affiche l'espèce(Type) de l'animal
+   echo "Poids: " . $animal->getPoids() . " kg<br>"; // Affiche le poids de l'animal
+   echo "Taille: " . $animal->getTaille() . " m<br>"; // Affiche la taille de l'animal
+   echo "Âge: " . $animal->getAge() . " ans<br>"; // Affiche l'age de l'animal
+   echo "Faim: " . $animal->getFaim() . "<br>"; // Affiche si l'animal à faim ou non
+   echo "Dort: " . $animal->getdort() . "<br>"; // Affiche si l'animal dort ou non
+   echo "Malade: " . $animal->getmalade() . "<br>"; // Affiche si l'animal est malade ou non
+}
 
-
+    // Méthodes spécifiques au terrarium pour afficher les caractéristiques de l'enclos
+  abstract  public function afficherCaracteristiques();
 
  // Méthode commune à tous les enclos pour l'entretien
-    public function entretenirEnclos() {
- // Vérification si l'enclos est vide       
-        if ($this->nombreAnimaux === 0) { // si l'enclos est stictement égale à zero alors il est vide et donc il peut etre nétoyer
-            echo "L'enclos \"$this->nom\" est vide, il a été nettoyé.\n";
-            $this->proprete = "bonne";
-        } else { // sinon il y as des animaux donc je ne peut pas nétoyer
-            echo "L'enclos \"$this->nom\" n'est pas vide, l'entretien n'est pas nécessaire.\n";
-        }
-    }
+  abstract public function entretenirEnclos();
+
     // Méthode abstraite pour ajouter un animal à l'enclos
-   public function ajouterAnimal(Animal $animal) {
-        if ($this->nombreAnimaux < 6) { // si le nombre de mes animaux est inférieur à 6
-            $this->animals[] = $animal; // j'instencie un animal dans mon tableau
-            $this->nombreAnimaux ++; // j'ajoute un animal
-        } else {
-            echo "l'enclos est complet.";
-        }
-    }
+   abstract public function ajouterAnimal(Animal $animal);
+
      // Méthode abstraite pour enlever un animal de l'enclos
-   public function enleverAnimal(Animal $animal){
+   public function enleverAnimal(Enclos $animal){
     if ($this->nombreAnimaux >= 1 ) { // si le nombre de mes animaux est supérieur à 6
         $this->animals[] = $animal; // j'enlève un animal de mon tableau
         $this->nombreAnimaux --; // je retire un animal

@@ -50,13 +50,6 @@ $this->age = $age;
 public function getAge() {
     return $this->age;
 }
-// Méthodes permettant de définir et récupérer la propriété crie
-public function setCrie($crie){
-$this->crie = $crie;
-}
-public function getCrie() {
-    return $this->crie;
-}
 // Méthodes permettant de définir et récupérer la propriété soigner
 public function setSoigner($soigner){
 $this->soigner = $soigner;
@@ -64,18 +57,36 @@ $this->soigner = $soigner;
 public function getSoigner() {
     return $this->soigner;
 }
+public function setFaim($faim){
+$this->faim = $faim;
+}
+public function getFaim() {
+    return $this->faim;
+}
+public function setDort($dort){
+$this->dort = $dort;
+}
+public function getDort() {
+    return $this->dort;
+}
+public function setMalade($malade){
+$this->malade = $malade;
+}
+public function getMalade() {
+    return $this->malade;
+}
+abstract protected function emettreSon(); // Méthode abstraite  
+abstract protected function seDeplacer(); // Méthode abstraite
+
     // Méthode pour afficher les caractéristiques communes de l'animal
- public function caracteristique() {
+ public function caracteristiqueAnimaux() {
     echo "Espèce: " . $this->getEspece() . "<br>"; // Affiche l'espèce(Type) de l'animal
     echo "Poids: " . $this->getPoids() . " kg<br>"; // Affiche le poids de l'animal
     echo "Taille: " . $this->getTaille() . " m<br>"; // Affiche la taille de l'animal
     echo "Âge: " . $this->getAge() . " ans<br>"; // Affiche l'age de l'animal
-    echo "Faim: " . ($this->faim ? "Oui" : "Non") . "<br>"; // Affiche si l'animal à faim ou non
-    echo "Dort: " . ($this->dort ? "Oui" : "Non") . "<br>"; // Affiche si l'animal dort ou non
-    echo "Malade: " . ($this->malade ? "Oui" : "Non") . "<br>"; // Affiche si l'animal est malade ou non
-}
-public function mouvement() {
-    
+    echo "Faim: " . $this->getFaim() . "<br>"; // Affiche si l'animal à faim ou non
+    echo "Dort: " . $this->getDort() . "<br>"; // Affiche si l'animal dort ou non
+    echo "Malade: " . $this->getMalade() . "<br>"; // Affiche si l'animal est malade ou non
 }
 
 
