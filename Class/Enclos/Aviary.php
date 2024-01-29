@@ -6,14 +6,6 @@ class Aviary extends Enclos
     private $hauteur; // Hauteur de la volière
 
 
-    // Constructeur pour initialiser les propriétés spécifiques à la volière
-    public function __construct($nom, $proprete, $hauteur)
-    {
-        // Appel du constructeur de la classe parente (Enclos)
-        // Initialisation des propriétés héritées de la classe Enclos
-        parent::__construct($nom, $proprete);
-        $this->hauteur = $hauteur;
-    }
 
     public function setNom($nom) {
         $this->nom = $nom;

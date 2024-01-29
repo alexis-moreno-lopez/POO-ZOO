@@ -1,4 +1,5 @@
 <?php
+require_once './Class/Animal.php';
 abstract class Aigles extends Animal{
 
     private $espece = "aigle";
@@ -12,7 +13,7 @@ abstract class Aigles extends Animal{
 
     // Crie du tigre
     public function emettreSon() {
-        echo "$this->crie Piou Piou";
+        echo "$this->espece Piou Piou";
     }
     // déplacement du tigre
         public function seDeplacer() {
@@ -21,4 +22,6 @@ abstract class Aigles extends Animal{
     
 
 }
+// $aigle = new Aigles();
+// echo $aigles->__toSting();
 ?>

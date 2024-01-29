@@ -5,14 +5,7 @@ class Aquarium extends Enclos
     private $nom = "poisson";
     private $salinite; // Salinite de l'eau de l'aquarium
 
-    // Constructeur pour initialiser les propriétés spécifiques à l'aquarium
-    public function __construct($nom, $proprete, $salinite)
-    {
-        // Appel du constructeur de la classe parente (Enclos)
-        // Initialisation des propriétés héritées de la classe Enclos
-        parent::__construct($nom, $proprete);
-        $this->salinite = $salinite;
-    }
+
 
     public function setNom($nom) {
         $this->nom = $nom;

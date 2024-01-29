@@ -12,7 +12,7 @@ class Ours extends Animal{
 
     // Crie du tigre
     public function emettreSon() {
-        echo "$this->crie hhhmmmmmm";
+        echo "$this->espece hhhmmmmmm";
     }
     // déplacement du tigre
         public function seDeplacer() {

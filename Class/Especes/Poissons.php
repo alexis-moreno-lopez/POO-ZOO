@@ -13,7 +13,7 @@
 
     // Crie du tigre
     public function emettreSon() {
-        echo "$this->crie bloop bloop";
+        echo "$this->espece bloop bloop";
     }
     // déplacement du tigre
         public function seDeplacer() {

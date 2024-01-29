@@ -3,15 +3,14 @@
 // Déclaration d'une classe abstraite Animal avec plusieurs propriétés protégées représentant les caractéristiques communes à tous les animaux
 abstract class Animal {
      // Propriétés protégées représentant les caractéristiques communes à tous les animaux
-protected $poids;
-protected $taille;
-protected $espece;
-protected $age;
-protected $faim = false;
-protected $dort = false;
-protected $malade = false;
-protected $crie;
-protected $soigner;
+protected int $poids;
+protected int $taille;
+protected string $espece;
+protected int $age;
+protected bool $faim = false;
+protected bool $dort = false;
+protected bool $malade = false;
+protected bool $soigner;
 
 // Constructeur pour initialiser les propriétés communes à tous les animaux
 public function __construct($poids, $taille, $espece, $age) {
@@ -21,7 +20,7 @@ public function __construct($poids, $taille, $espece, $age) {
     $this->age = $age;
 }
 // Méthodes permettant de définir et récupérer la propriété poids
-public function setPoids($poids){
+public function setPoids($poids) :void {
 $this->poids = $poids;
 }
 

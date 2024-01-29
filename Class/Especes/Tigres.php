@@ -12,8 +12,8 @@ class Tigres extends Animal{
     }
 
     // Crie du tigre
-    public function emettreSon() {
-        echo "$this->crie Rwwwwwaaaaaaa";
+    public function emettreSon() :void {
+        echo "$this->espece Rwwwwwaaaaaaa";
     }
     // déplacement du tigre
         public function seDeplacer() {
