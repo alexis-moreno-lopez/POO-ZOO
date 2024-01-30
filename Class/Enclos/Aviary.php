@@ -2,8 +2,8 @@
 // Définition de la classe Aviary qui étend la classe Enclos
 class Aviary extends Enclos
 {
-    private $nom = "aigle";
-    private $hauteur; // Hauteur de la volière
+    protected $nom = "aigle";
+    protected $hauteur; // Hauteur de la volière
 
 
 

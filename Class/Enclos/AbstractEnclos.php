@@ -5,7 +5,7 @@ abstract class Enclos
 {
 
     protected string $nom; // nom de l'enclos
-    protected string $proprete; // niveau de proprete
+    protected string $proprete = 'bonne'; // niveau de proprete
     protected int $nombreAnimaux = 0; // nombre d'animaux dans l'enclos
 
     protected array $animals = []; // mon tableau animals dans le quel j'ajoute mes animaux 

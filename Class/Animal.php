@@ -10,7 +10,7 @@ protected int $age;
 protected bool $faim = false;
 protected bool $dort = false;
 protected bool $malade = false;
-protected bool $soigner;
+protected bool $soigner = false;
 
 // Constructeur pour initialiser les propriétés communes à tous les animaux
 public function __construct($poids, $taille, $espece, $age) {
@@ -75,7 +75,7 @@ public function getMalade() {
     return $this->malade;
 }
 abstract protected function emettreSon(); // Méthode abstraite  
-abstract protected function seDeplacer(); // Méthode abstraite
+abstract protected function vagabonder(); // Méthode abstraite
 
     // Méthode pour afficher les caractéristiques communes de l'animal
  public function caracteristiqueAnimaux() {

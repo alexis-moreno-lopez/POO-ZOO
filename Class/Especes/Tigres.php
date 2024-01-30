@@ -16,7 +16,7 @@ class Tigres extends Animal{
         echo "$this->espece Rwwwwwaaaaaaa";
     }
     // déplacement du tigre
-        public function seDeplacer() {
+        public function vagabonder() {
             echo "($this->espece) est en train de vagabonder.\n";
         }
     

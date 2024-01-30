@@ -2,8 +2,8 @@
 // Définition de la classe Aquarium qui étend la classe Enclos
 class Aquarium extends Enclos
 {
-    private $nom = "poisson";
-    private $salinite; // Salinite de l'eau de l'aquarium
+    protected $nom = "poisson";
+    protected $salinite; // Salinite de l'eau de l'aquarium
 
 
 
